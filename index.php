@@ -1,41 +1,5 @@
+
 <?php get_header(); ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./style.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="./js/script.js"></script>
-
-    <title>宮崎キャリアデザインスクール / main</title>
-</head>
-
-<body>
-
-    <header>
-        <h2 class="header_title"><a href="index.html">宮崎キャリアデザインスクール</a></h2>
-
-        <div class="grobal_navi">
-            <div class="change_wrapper">
-                <ul>
-                    <li><a href="./others/feature.html">当校の特徴</a></li>
-                    <li><a href="./others/lessons.html">授業紹介</a></li>
-                    <li><a href="./others/outcome.html">受講生の成果</a></li>
-                </ul>
-                <div class="hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <div class="mv">
         <div class="catch_area">
@@ -145,43 +109,43 @@
                 <h3>授業で利用するツール・アプリ</h3>
                 <ul>
                     <li>
-                        <img src="./images/illustrator.png" alt="illustratorアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/illustrator.png" alt="illustratorアイコン">
                         <p>illustrator</p>
                     </li>
                     <li>
-                        <img src="./images/photoshop.png" alt="photoshopアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/photoshop.png" alt="photoshopアイコン">
                         <p>photoshop</p>
                     </li>
                     <li>
-                        <img src="./images/xd.png" alt="XDアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/xd.png" alt="XDアイコン">
                         <p>adobe XD</p>
                     </li>
                     <li>
-                        <img src="./images/html5.png" alt="HTML5アイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/html5.png" alt="HTML5アイコン">
                         <p>HTML5</p>
                     </li>
                     <li>
-                        <img src="./images/css3.png" alt="CSS3アイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/css3.png" alt="CSS3アイコン">
                         <p>CSS3</p>
                     </li>
                     <li>
-                        <img src="./images/davinci_resolve.png" alt="Davinchi Resolveアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/davinci_resolve.png" alt="Davinchi Resolveアイコン">
                         <p>Davinchi Resolve</p>
                     </li>
                     <li>
-                        <img src="./images/gulp.png" alt="Gulpアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/gulp.png" alt="Gulpアイコン">
                         <p>Gulp</p>
                     </li>
                     <li>
-                        <img src="./images/github.png" alt="githubアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/github.png" alt="githubアイコン">
                         <p>Github</p>
                     </li>
                     <li>
-                        <img src="./images/docker.png" alt="Dockerアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/docker.png" alt="Dockerアイコン">
                         <p>Docker</p>
                     </li>
                     <li>
-                        <img src="./images/wordpress.png" alt="wordpressアイコン">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/wordpress.png" alt="wordpressアイコン">
                         <p>Wordpress</p>
                     </li>
                 </ul>
@@ -197,19 +161,19 @@
 
                 <div class="statistics-item">
                     <h3>受講生の年齢</h3>
-                    <div class="image"><img src="./images/graph01.png" alt="受講生の年齢"></div>
+                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/graph01.png" alt="受講生の年齢"></div>
                     <p>20代〜30代の方が中心ですが、幅広い年齢層の方が受講をしています。</p>
                 </div>
 
                 <div class="statistics-item">
                     <h3>受講生の職歴</h3>
-                    <div class="image"><img src="./images/graph02.png" alt="受講生の職歴"></div>
+                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/graph02.png" alt="受講生の職歴"></div>
                     <p>就業経験がある方の受講がほとんどです。未経験の分野への転職やスキルアップの機会として受講しています。</p>
                 </div>
 
                 <div class="statistics-item">
                     <h3>受講生の学習有無</h3>
-                    <div class="image"><img src="./images/graph03.png" alt="受講生の学習有無"></div>
+                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/graph03.png" alt="受講生の学習有無"></div>
                     <p>大半が未経験ですが、経験にブランクがある方や独学で取り組んできた方が、専門性を高めたいという目的で受講するケースが増えています。</p>
                 </div>
 
@@ -272,36 +236,4 @@
         </div>
     </main>
 
-    <footer>
-        <h2 class="footer-title">宮崎キャリアデザインスクール</h2>
-        <div class="footer-navi">
-            <ul>
-                <li class="notlink"><a href="">アクセス</a></li>
-                <li class="notlink"><a href="">情報セキュリティ方針</a></li>
-                <li class="notlink"><a href="">利用規約</a></li>
-                <li><a href="./others/QA.html#QA_form">お問い合わせ</a></li>
-                <li class="notlink"><a href="">私たちについて</a></li>
-                <li><a href="./others/QA.html">QA</a></li>
-            </ul>
-        </div>
-        <div class="two-column-layout">
-            <div class="social">
-                <h3>SNS</h3>
-                <p class="notlink"><a href=""><i class="fab fa-facebook"></i>facebook</a></p>
-                <p class="notlink"><a href=""><i class="fab fa-instagram"></i>instagram</a></p>
-            </div>
-            <div class="company-info">
-                <h3>法人情報</h3>
-                <p>インタークロス(運営元法人)については (<a href="https://www.inter-cross.com/">こちら</a>)</p>
-                <p>当サイトに関するお問い合わせ・苦情窓口<br>
-                    0985-55-0963</p>
-            </div>
-        </div>
-        <small>©2021 INTER CROSS. All rights reserved</small>
-
-    </footer>
-</body>
-
-</html>
-
-<?php get_footer(); ?>
+<?php get_footer();?>
