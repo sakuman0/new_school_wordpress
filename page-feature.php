@@ -99,8 +99,7 @@
                 地方転職に関しましては、非公開求人の斡旋も可能でございます。</p>
 
         </section>
- 
-        
+
 
         <section class="school_event">
             <h2 class="main-title">半年間の行事</h2>
@@ -108,76 +107,32 @@
 
             <div class="event-list">
 
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event1.png" alt="入校式・オリエンテーション"></div>
-                    <h3 class="event-title">入校式・オリエンテーション</h3>
-                    <p class="event-text">当日は、先生方にも集まって貰い、生徒・先生全員の自己紹介を行います。</p>
+            <?php $args = array(
+                'numberposts'     => 8,  //表示する記事の数
+                'order' => 'ASC',
+                'category_name' => 'school_events',//表示するカテゴリ
+                ); ?>
+                <?php $myposts = get_posts( $args ); ?>
+                <?php foreach($myposts as $post) : setup_postdata($post); ?>
+                    <div class="event-item">'
+                    <div class="image"><?php the_post_thumbnail('100%','auto'); ?></div>
+                        <h3 class="event-title"><?php the_title(); ?></h3>
+                        <p class="event-text"><?php the_content(); ?></p>
+                    </div>
+                    <!--event-item-->
+                    <?php endforeach; ?>
+                    <?php wp_reset_query(); ?>
                 </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event2.png" alt="デザインの授業"></div>
-                    <h3 class="event-title">デザインの授業</h3>
-                    <p class="event-text">
-                        Illustratorやphotoshop、デザイン、プレゼンなど、前半はデザイン系の授業が集中しています。　　頻度は減りますが、後半でもデザインの授業は続きます！</p>
-                </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event3.png" alt="コーディングの授業"></div>
-                    <h3 class="event-title">コーディングの授業</h3>
-                    <p class="event-text">HTMLやCSS、wordpress等の授業が開始！　作るだけではなく、WEBデザインの授業もあります。</p>
-                </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event4.png" alt="職業人講話"></div>
-                    <h3 class="event-title">職業人講話</h3>
-                    <p class="event-text">受講中に計2回、合計4社の講話を聞くことが出来ました。　さらに、4社中3社は宮崎キャリアデザインスクールの卒業生達が所属するIT企業でした！</p>
-                </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event5.png" alt="息抜きの時間"></div>
-                    <h3 class="event-title">息抜きの時間</h3>
-                    <p class="event-text">宮崎キャリアデザインスクールには、ビリアード台が設置してあります。　ちょっと授業に疲れた時や、お昼休などにみんなでビリアードを楽しむことも出来ます！</p>
-                </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event6.png" alt="企業実習"></div>
-                    <h3 class="event-title">企業実習</h3>
-                    <p class="event-text">学校で学んできたことの実践です。デザイン系、コーディング系等、自分が目指す業種の企業実習に参加します。</p>
-                </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event7.png" alt="修了式"></div>
-                    <h3 class="event-title">修了式</h3>
-                    <p class="event-text">6ヶ月の学習過程が終了しました。　72期生は全員が内定も貰うことができ、修了式を迎えることができました。</p>
-                </div>
-                <!--event-item-->
-
-                <div class="event-item">
-                    <div class="image"><img src="<?php echo get_template_directory_uri(); ?>/images/event8.png" alt="先輩方の修了式"></div>
-                    <h3 class="event-title">先輩方の修了式</h3>
-                    <p class="event-text">先輩方が終了式を迎える時は、必ず催し物を行いました！　
-                        この時は、10月だったので、Helloween風の催しで先輩たちの
-                        卒業を盛り上げました。</p>
-                </div>
-                <!--event-item-->
-
-            </div>
         </section>
 
         <div class="cource-guide">
             <h2 class="guide-title">登録すると次回のコース案内が受け取れます。</h2>
             <p class="guide-text">ご希望の方は以下の「コース案内を受け取る」より、お申し込みください。<br>
                 募集開始のお知らせ以外は配信いたしません。</p>
-            <p class="guide-button"><a href="./course_request.html">コース案内を受け取る</a></p>
+            <p class="guide-button"><a href="<?php echo home_url(); ?>/course_request">コース案内を受け取る</a></p>
         </div>
         <div class="scroll_button fixed">
             <p></p>
         </div>
     </main>
-    <?php get_footer();?>/
+    <?php get_footer();?>

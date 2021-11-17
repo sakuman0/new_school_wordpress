@@ -2,12 +2,12 @@
         <h2 class="footer-title">宮崎キャリアデザインスクール</h2>
         <div class="footer-navi">
             <ul>
-                <li class="notlink"><a href="">アクセス</a></li>
-                <li class="notlink"><a href="">情報セキュリティ方針</a></li>
-                <li class="notlink"><a href="">利用規約</a></li>
-                <li><a href="./others/QA.html#QA_form">お問い合わせ</a></li>
-                <li class="notlink"><a href="">私たちについて</a></li>
-                <li><a href="./others/QA.html">QA</a></li>
+                <li><a href="<?php echo home_url(); ?>/access">アクセス</a></li>
+                <li><a href="<?php echo home_url(); ?>/privacy">情報セキュリティ方針</a></li>
+                <li><a href="<?php echo home_url(); ?>/agreement">利用規約</a></li>
+                <li><a href="<?php echo home_url(); ?>/qa#QA_form">お問い合わせ</a></li>
+                <li><a href="<?php echo home_url(); ?>/company">私たちについて</a></li>
+                <li><a href="<?php echo home_url(); ?>/qa">QA</a></li>
             </ul>
         </div>
         <div class="two-column-layout">

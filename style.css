@@ -762,6 +762,7 @@ header .header_title a {
     padding:15px;
     box-sizing: border-box;
     border:solid 1px #CCB0B0;
+    line-height:2;
 }
 .briefing_form table td ,
 .QA_form table td {
@@ -770,6 +771,7 @@ header .header_title a {
     padding:10px;
     box-sizing: border-box;
     border:solid 1px #CCB0B0;
+    line-height:2;
 }
 .briefing_form table .attention ,
 .QA_form table .attention {
@@ -820,6 +822,19 @@ header .header_title a {
     height:20px;
     border:solid 3px skyblue;
 }
+.briefing_form .checkbox.checked::after ,
+.QA_form .checkbox.checked::after {
+    position:absolute;
+    top:0px;
+    left:-20px;
+    display: block;
+    content:"";
+    width:8px;
+    height:16px;
+    border-right: 3px solid #00cccc;
+    border-bottom: 4px solid #00cccc;
+    transform: rotate(45deg);
+}
 .briefing_form .form_button ,
 .QA_form .form_button {
     text-align: center;
@@ -849,6 +864,7 @@ header .header_title a {
     color:#3D4D99;
     padding-right:30px;
     padding-bottom:5px;
+    cursor: pointer;
 }
 .QA_item .question::before {
     position:absolute;
@@ -883,11 +899,29 @@ header .header_title a {
     background-color: #87CE8B;
     cursor: pointer;
 }
+.QA_item .open::after {
+    position:absolute;
+    top:50%;
+    right:10px;
+    transform:translateY(calc(-50% - 3px));
+    display: block;
+    content:"×";
+    color:#fff;
+    font-weight:bold;
+    width:20px;
+    height:20px;
+    line-height:23px;
+    text-align: center;
+    border-radius:100%;
+    background-color: #87CE8B;
+    cursor: pointer;
+}
 .QA_item .answer {
     position:relative;
     border-bottom:solid 2px #707070;
     margin-left:40px;
     padding-right:30px;
+    display:none;
 }
 .QA_item .answer::before {
     position:absolute;

@@ -4,7 +4,7 @@
     <div class="mv">
         <div class="catch_area">
             <h1 class="catch">プロが教えるWEB制作の学校でプロの仕事を学んでみませんか？</h1>
-            <p class="main-button"><a href="./others/course_request.html">コース案内を受け取る</a></p>
+            <p class="main-button"><a href="<?php echo home_url(); ?>/course_request">コース案内を受け取る</a></p>
         </div>
     </div>
 
@@ -229,7 +229,7 @@
             <h2 class="guide-title">登録すると次回のコース案内が受け取れます。</h2>
             <p class="guide-text">ご希望の方は以下の「コース案内を受け取る」より、お申し込みください。<br>
                 募集開始のお知らせ以外は配信いたしません。</p>
-            <p class="guide-button"><a href="./others/course_request.html">コース案内を受け取る</a></p>
+            <p class="guide-button"><a href="<?php echo home_url(); ?>/course_request">コース案内を受け取る</a></p>
         </div>
         <div class="scroll_button fixed">
             <p></p>

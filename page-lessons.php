@@ -557,7 +557,7 @@
             <h2 class="guide-title">登録すると次回のコース案内が受け取れます。</h2>
             <p class="guide-text">ご希望の方は以下の「コース案内を受け取る」より、お申し込みください。<br>
                 募集開始のお知らせ以外は配信いたしません。</p>
-            <p class="guide-button"><a href="./course_request.html">コース案内を受け取る</a></p>
+            <p class="guide-button"><a href="<?php echo home_url(); ?>/course_request">コース案内を受け取る</a></p>
         </div>
         <div class="scroll_button fixed">
             <p></p>

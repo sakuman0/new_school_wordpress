@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function () {
 
     var mySwiper = new Swiper('.swiper-container', {
         loop: true,

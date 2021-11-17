@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/swiper.js"></script>
 
     <title>宮崎キャリアデザインスクール / main</title>
     <?php wp_head(); ?>
