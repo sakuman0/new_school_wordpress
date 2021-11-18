@@ -3,75 +3,53 @@
     <main>
         <div class="mv-height"></div>
 
-        <section class="student_works">
+<?php
+$args = array (
+    'category_name' => 'student_works', // カテゴリーID
+    'order'    => 'ASC',
+    'numberposts' => 6, // 取得する投稿数
+);
+$myposts = get_posts( $args );
+foreach( $myposts as $post ):
+setup_postdata($post); //　グローバル変数$postを書き換え
+?>
+<!-- 繰り返し処理する内容 -->
+<?php
+    endforeach;
+    wp_reset_postdata(); // $postをグローバル変数に戻す
+?>
+
+
+        <section class="student_works">  <!--作業中-->
             <h2 class="main-title">受講生の作品</h2>
 
             <div class="work_list">
+
+            <?php
+            $args = array (
+                'category_name' => 'student_works', // カテゴリーID
+                'order'    => 'ASC',
+                'numberposts' => 6, // 取得する投稿数
+            );
+            $myposts = get_posts( $args );
+            foreach( $myposts as $post ):
+            setup_postdata($post); //　グローバル変数$postを書き換え
+            ?>
+            
                 <div class="work_item">
                     <div class="image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/work1.jpg" alt="受講生の作品">
+                        <img src="<?php the_post_thumbnail_url(); ?>" alt="受講生の作品">
                         <div class="work_summary">
-                            <p>Web・DTPデザイナー養成科<br>
-                                ニックネーム：ぽんちゃん<br>
-                                架空の猫カフェのサイト</p>
+                            <?php the_field('student_works_info'); ?>
                         </div>
                     </div>
                 </div>
 
-                <div class="work_item">
-                    <div class="image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/work2.jpg" alt="受講生の作品">
-                        <div class="work_summary">
-                            <p>Webクリエイター養成科<br>
-                                ニックネーム：アルフ<br>
-                                海外向けの着物文化紹介サイト</p>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                endforeach;
+                wp_reset_postdata(); // $postをグローバル変数に戻す
+                ?>
 
-                <div class="work_item">
-                    <div class="image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/work3.png" alt="受講生の作品">
-                        <div class="work_summary">
-                            <p>Web・DTPデザイナー養成科<br>
-                                ニックネーム：シーサー<br>
-                                商品イメージ撮影</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work_item">
-                    <div class="image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/work4.png" alt="受講生の作品">
-                        <div class="work_summary">
-                            <p>Webデザイナー養成科<br>
-                                ニックネーム：Kiety<br>
-                                架空の店舗のWebサイト</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work_item">
-                    <div class="image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/work5.png" alt="受講生の作品">
-                        <div class="work_summary">
-                            <p>Webクリエイター養成科<br>
-                                ニックネーム：そってぃ<br>
-                                架空の企業のWebサイト</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work_item">
-                    <div class="image">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/work6.png" alt="受講生の作品">
-                        <div class="work_summary">
-                            <p>Web・DTPデザイナー養成科<br>
-                                ニックネーム：なーちゃん<br>
-                                広告バナーデザイン</p>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="item_detail_wrapper">
                 <p class="cross">×</p>
@@ -79,9 +57,11 @@
                     <div class="image">
                         <img src="" alt="">
                     </div>
-                </div>    
+                </div>
             </div>
-        </section>
+
+        </section>  <!--作業中-->
+
 
         <section class="impressions">
             <h2 class="main-title">受講生の声</h2>

@@ -114,7 +114,7 @@
                 ); ?>
                 <?php $myposts = get_posts( $args ); ?>
                 <?php foreach($myposts as $post) : setup_postdata($post); ?>
-                    <div class="event-item">'
+                    <div class="event-item">
                     <div class="image"><?php the_post_thumbnail('100%','auto'); ?></div>
                         <h3 class="event-title"><?php the_title(); ?></h3>
                         <p class="event-text"><?php the_content(); ?></p>
