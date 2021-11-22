@@ -14,31 +14,31 @@
                     <table>
                         <tr>
                             <th><span class="attention required">必須</span>お名前</th>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="name"></td>
                         </tr>
                         <tr>
                             <th><span class="attention required">必須</span>ふりがな</th>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="rubi"></td>
                         </tr>
                         <tr>
                             <th><span class="attention required">必須</span>性別</th>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="gender"></td>
                         </tr>
                         <tr>
                             <th><span class="attention required">必須</span>生年月日(半角数字)</th>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="birthday"></td>
                         </tr>
                         <tr>
                             <th><span class="attention required">必須</span>電話番号(半角数字)</th>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="tel"></td>
                         </tr>
                         <tr>
                             <th><span class="attention required">必須</span>メールアドレス(半角英数字)</th>
-                            <td><input type="text"></td>
+                            <td><input type="text" class="mail"></td>
                         </tr>
                         <tr>
                             <th><span class="attention optional">任意</span>質問事項</th>
-                            <td><textarea name=""></textarea></td>
+                            <td><textarea name="" class="inquiry"></textarea></td>
                         </tr>
                     </table>
 
@@ -52,7 +52,46 @@
 
                 </form>
             </section>
+
+            <div class="check_wrapper">
+            <p class="cross">×</p>
+
+                <div class="check_form">
+                    <h2 class="check_title">確認画面</h2>
+                    <p class="check_text">以下内容にお間違いが無いことをご確認ください。</p>
+
+                    <h3 class="title">お名前</h3>
+                    <p class="info name"></p>
+
+                    <h3 class="title">ふりがな</h3>
+                    <p class="info rubi"></p>
+
+                    <h3 class="title">性別</h3>
+                    <p class="info gender"></p>
+
+                    <h3 class="title">生年月日</h3>
+                    <p class="info birthday"></p>
+
+                    <h3 class="title">電話番号</h3>
+                    <p class="info tel"></p>
+
+                    <h3 class="title">メールアドレス</h3>
+                    <p class="info mail"></p>
+
+                    <h3 class="title">質問事項</h3>
+                    <p class="info inquiry"></p>
+
+                    <h3 class="title">WEB・デザインに関するイベント情報</h3>
+                    <p class="info event_mail"></p>
+
+                    <div class="send_button">
+                        <p>送信する</p>
+                    </div>
+                    
+                </div>
+            </div>
+        
         </div>
 
     </main>    
-<?php get_footer();?>/
+<?php get_footer();?>

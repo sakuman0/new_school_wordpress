@@ -76,6 +76,99 @@ jQuery(function () {
         jQuery(".checkbox").toggleClass("checked");
     });
 
+    jQuery(".QA_form .form_button").click(function(){
+        let name = $(".QA_form .name").val();
+        let rubi = $(".QA_form .rubi").val();
+        let tel = $(".QA_form .tel").val();
+        let mail = $(".QA_form .mail").val();
+        let inquiry = $(".QA_form .inquiry").val();
+        let event_mail = "";
+        //チェックボックスが選択状態なら
+        console.log(name);
+        console.log(rubi);
+        console.log(tel);
+        console.log(mail);
+        console.log(inquiry);
+        console.log(event_mail);
 
+        if(jQuery(".QA_form .checkbox").attr("class").indexOf("checked") !== -1){
+            event_mail = "受け取る";
+        }else {
+            event_mail = "受け取らない";
+        }
+        if(inquiry === ""){inquiry = "未入力";}
+
+        if(name === "" || rubi === "" ||  tel === "" || mail === ""){
+            alert("必須項目の入力が不足しています。");
+            console.log("こっち");
+        } else {
+            console.log("こっちじゃない");
+            jQuery(".check_wrapper , .check_form").show();
+            jQuery('html, body').animate({ scrollTop: 0 });
+            jQuery("body").css("overflow", "hidden");
+
+            jQuery(".check_wrapper .name").text(name);
+            jQuery(".check_wrapper .rubi").text(rubi);
+            jQuery(".check_wrapper .tel").text(tel);
+            jQuery(".check_wrapper .mail").text(mail);
+            jQuery(".check_wrapper .inquiry").text(inquiry);
+            jQuery(".check_wrapper .event_mail").text(event_mail);
+        }
+        return false;
+    });
+
+
+    jQuery(".briefing_form .form_button").click(function(){
+
+        let name = $(".briefing_form .name").val();
+        let rubi = $(".briefing_form .rubi").val();
+        let gender = $(".briefing_form .gender").val();
+        let birthday = $(".briefing_form .birthday").val();
+        let tel = $(".briefing_form .tel").val();
+        let mail = $(".briefing_form .mail").val();
+        let inquiry = $(".briefing_form .inquiry").val();
+        let event_mail = "";
+        //チェックボックスが選択状態なら
+        if(jQuery(".briefing_form .checkbox").attr("class").indexOf("checked") !== -1){
+            event_mail = "受け取る";
+        }else {
+            event_mail = "受け取らない";
+        }
+        if(inquiry === ""){inquiry = "未入力";}
+
+        if(name === "" || rubi === "" || gender === "" || birthday === "" || tel === "" ||
+        mail ===""){
+            alert("必須項目の入力が不足しています。");
+        } else {
+            jQuery(".check_wrapper , .check_form").show();
+            jQuery('html, body').animate({ scrollTop: 0 });
+            jQuery("body").css("overflow", "hidden");
+
+            jQuery(".check_wrapper .name").text(name);
+            jQuery(".check_wrapper .rubi").text(rubi);
+            jQuery(".check_wrapper .gender").text(gender);
+            jQuery(".check_wrapper .birthday").text(birthday);
+            jQuery(".check_wrapper .tel").text(tel);
+            jQuery(".check_wrapper .mail").text(mail);
+            jQuery(".check_wrapper .inquiry").text(inquiry);
+            jQuery(".check_wrapper .event_mail").text(event_mail);
+        }
+        return false;
+    });
+
+    
+    jQuery(".check_wrapper .cross").click(function(){
+        jQuery(".check_wrapper , .check_form").hide();
+        jQuery("body").css("overflow", "visible");
+    });
+
+    jQuery(".check_wrapper .send_button").click(function(){
+        alert("送信が完了しました。");
+        jQuery(".check_wrapper , .check_form").hide();
+        jQuery(".briefing_form .checkbox , .QA_form .checkbox").removeClass("checked");
+        jQuery("body").css("overflow", "visible");
+        jQuery('form').find(':text').val("");
+        jQuery('form').find('textarea').val("");
+    });
 
 });

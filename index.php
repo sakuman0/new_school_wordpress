@@ -182,47 +182,29 @@
         </section>
         <!--statistics-->
 
+
         <section class="news">
             <h2 class="main-title">ニュース</h2>
             <ul class="news-list">
-                <li><a href="">
-                        <p class="time">2021.12.11</p>
-                        <p class="news-division">区分</p>
-                        <p class="news-text">ここにニューステキストが入ります。ここにニューステキストが入ります。ここにニューステキストが入ります。</p>
+            <?php $args = array(
+                    'numberposts'     => 6,  //表示する記事の数
+                    'order' => 'ASC',
+                    'category_name' => 'news',//表示するカテゴリ
+                ); ?>
+                    <?php $myposts = get_posts( $args ); ?>
+                    <?php foreach($myposts as $post) : setup_postdata($post); ?>
+                <li>
+                    <a href="<?php echo home_url(); ?>/temporary">
+                        <p class="time"><?php the_field('update_date'); ?></p>
+                        <p class="news-division"><?php the_field('type'); ?></p>
+                        <p class="news-text"><?php the_title(); ?></p>
                     </a>
                 </li>
-                <li><a href="">
-                        <p class="time">2021.12.11</p>
-                        <p class="news-division">区分</p>
-                        <p class="news-text">ここにニューステキストが入ります。ここにニューステキストが入ります。ここにニューステキストが入ります。</p>
-                    </a>
-                </li>
-                <li><a href="">
-                        <p class="time">2021.12.11</p>
-                        <p class="news-division">区分</p>
-                        <p class="news-text">ここにニューステキストが入ります。</p>
-                    </a>
-                </li>
-                <li><a href="">
-                        <p class="time">2021.12.11</p>
-                        <p class="news-division">区分</p>
-                        <p class="news-text">ここにニューステキストが入ります。</p>
-                    </a>
-                </li>
-                <li><a href="">
-                        <p class="time">2021.12.11</p>
-                        <p class="news-division">区分</p>
-                        <p class="news-text">ここにニューステキストが入ります。</p>
-                    </a>
-                </li>
-                <li><a href="">
-                        <p class="time">2021.12.11</p>
-                        <p class="news-division">区分</p>
-                        <p class="news-text">ここにニューステキストが入ります。</p>
-                    </a>
-                </li>
+
+                    <?php $count++; endforeach; ?>
+                <?php wp_reset_query(); ?>
             </ul>
-            <p class="show-more"><a href="#">もっと見る</a></p>
+            <p class="show-more"><a href="<?php echo home_url(); ?>/news">もっと見る</a></p>
         </section>
 
         <div class="cource-guide">

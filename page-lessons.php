@@ -79,10 +79,6 @@
 
         </section>
 
-
-
-
-
         <section class="teachers_area">
             <h2 class="main-title">教師のご紹介</h2>
             <p class="main-title_desc">宮崎キャリアデザインスクールで教鞭をとる、教師たちについてご紹介をさせて頂きます。</p>
