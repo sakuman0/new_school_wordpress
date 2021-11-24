@@ -188,7 +188,7 @@
             <ul class="news-list">
             <?php $args = array(
                     'numberposts'     => 6,  //表示する記事の数
-                    'order' => 'ASC',
+                    'order' => 'DESC',
                     'category_name' => 'news',//表示するカテゴリ
                 ); ?>
                     <?php $myposts = get_posts( $args ); ?>

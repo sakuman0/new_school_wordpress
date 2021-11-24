@@ -11,3 +11,5 @@ function is_even_post() {
     global $wp_query;
     return ( ( ( $wp_query->current_post + 1 ) % 2 ) === 0 );
   }
+
+  add_theme_support('title-tag');
